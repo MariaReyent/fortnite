@@ -1,16 +1,15 @@
 
 function GoodsItem(props){
     const {
-        id,
+        mainId,
         displayName,
         displayDescription,
         price: {finalPrice},
-        displayAssets
-        //full_background,
-        //addToBasket = Function.prototype,
+        displayAssets,
+        addToBasket= Function.prototype,
     } = props;
     const {url}= displayAssets[0];
-    console.log(displayAssets[0]);
+    
     return (
         <div className='card'>
             <div className='card-image'  style={{backgroundColor:"#000"}}>
@@ -22,12 +21,18 @@ function GoodsItem(props){
             </div>
             <div className='card-action'>
                 <button
-                    className='btn'
+                    className='btn' onClick={()=>addToBasket({
+                        mainId, 
+                        displayName,
+                        finalPrice,
+                        
+                    }) 
+                }
                 >
                     Buy
                 </button>
                 <span className='right' style={{ fontSize: '1.8rem' }}>
-                    {finalPrice} doll.
+                    {finalPrice} $.
                 </span>
             </div>
         </div>
