@@ -6,20 +6,14 @@ function BasketList(props){
     return (
           <ul className="collection  basket-list">
         <li  className="collection-item active">Basket</li>
-        {order.length ? ( 
-          order.map(item) =>(
-             <BasketItem   
-             key={item.mainId} 
-             {...item}
-             />
-            ))
-            ) : 
-            (<li  className="collection-item active">Basket is empty</li>
-            )}
+        {
+          order.length ? order.map(item => (
+            <BasketItem key= {item.mainId} {...item}/>
+          )) : <li  className="collection-item">Basket is empty</li> 
+        }
         <li  className="collection-item active">Total:</li>
 </ul>
     );      
-
 }
 
 export {BasketList}
