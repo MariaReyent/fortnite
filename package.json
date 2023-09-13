@@ -1,6 +1,6 @@
 {
   "name": "project2",
-  "home": "https://MariaReyent.github.io/fortnite",
+  "homepage": "https://MariaReyent.github.io/fortnite",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
